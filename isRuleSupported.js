@@ -6,7 +6,7 @@
  */
 
 (function(win){
-	'use strict';
+    'use strict'; 
 
     // Create a shortcut for the CSSRule interface
     var CSSRule = win.CSSRule, 
