@@ -26,9 +26,12 @@
     
     for(var i=0, len = rules.length; i < len; i++){
         var rule = rules[i],
-        support = isRuleSupported(rule), 
-        className = support ? 'supported' : 'unsupported';
-        html += '<li><span class="label"><span>@'+rule+'</span>:</span><span class="'+className+'">'+String(support).toUpperCase()+'</span></li>';
+        support = isRuleSupported(rule),
+        usupport = isRuleSupported(rule, true),
+        className = support ? 'supported' : 'unsupported',
+        uclassName = usupport ? 'supported' : 'unsupported';
+        html += '<li><span class="label"><span>@'+rule+'</span>:</span><span class="'+uclassName+'">'+String(usupport).toUpperCase()+'</span></li>';
+        html += '<li><span class="label"><span>@'+rule+'</span>:</span><span class="'+className+'">'+String(support).toUpperCase()+' (Prefixed)</span></li>';
     }
     
     list.innerHTML = html;

@@ -17,9 +17,15 @@
     length;
 
     // Define the function globally
-    win.isRuleSupported = function(rule){
+    win.isRuleSupported = function(rule, unprefixed){
+        unprefixed = typeof unprefixed !== 'undefined' ?  unprefixed : false;
         // Convert the rule name to a form compatible with the CSSRule type constants
         rule = rule.toUpperCase().split('-').join('_') + '_RULE';
+        // If we are looking for unprefixed support, we don't need to loop through anything; just
+        // check for the rule name in the CSSRule window property
+        if (unprefixed) {
+            return rule in CSSRule;
+        }
         // Support is false to start, must be proven
         support = false;
         // Cache the length of prefixes for the while loop
