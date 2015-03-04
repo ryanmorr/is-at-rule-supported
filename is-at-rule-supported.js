@@ -18,7 +18,7 @@
         support = false;
         // Convert the rule string to a form compatible with the `CSSRule` type constants: 
         // https://wiki.csswg.org/spec/cssom-constants#cssruletype-enumeration
-        rule = rule.replace(atRe,'').toUpperCase().split('-').join('_') + '_RULE';
+        rule = rule.replace(atRe, '').toUpperCase().split('-').join('_') + '_RULE';
         length = prefixes.length;
         while(!support && length--){
             // Starting with the unprefixed version, iterate over all the vendor
