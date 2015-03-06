@@ -2,7 +2,7 @@
  * isAtRuleSupported
  * Feature test CSS at-rule support
  * @param {String} rule
- * @return {Boolean}
+ * @return {Boolean|Undefined}
  */
 
 (function(win){
