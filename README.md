@@ -4,7 +4,7 @@ Feature test support for CSS at-rules in JavaScript by checking for the existanc
 
 ## Usage
 
-To use the method, simply provide a string of the CSS at-rule
+To use the method, simply provide a string of the CSS at-rule:
 
 ```javascript
 // is the @keyframes rule supported
@@ -14,15 +14,17 @@ isAtRuleSupported('@font-face');
 // is the @supports rule supported
 isAtRuleSupported('@supports');
 ```
+The function will return true for supported at-rules, false for unsupported at-rules, and undefined for browsers that do not support the `CSSRule` interface.
 
 ## Browser Support
 
 * Chrome *
-* Android *
 * Firefox *
 * Opera *
 * Safari *
 * Internet Explorer 9+
+* Android *
+* iOS *
 
 ## License
 
