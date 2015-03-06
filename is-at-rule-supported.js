@@ -15,6 +15,10 @@
     length;
 
     win.isAtRuleSupported = function(rule){
+        // If the `CSSRule` interface doesn't exist, return undefined
+        if(!win.CSSRule){
+            return undefined;
+        }
         support = false;
         // Convert the rule string to a form compatible with the `CSSRule` type constants: 
         // https://wiki.csswg.org/spec/cssom-constants#cssruletype-enumeration
