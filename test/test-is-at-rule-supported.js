@@ -1,6 +1,8 @@
 describe('isAtRuleSupported', function(){
     'use strict';
 
+    var expect = chai.expect;
+
     // Thanks to Modernizr: https://github.com/Modernizr/Modernizr/blob/master/test/browser/src/atRule.js
 
     it('should return undefined when the browser does not support CSSRule', function(){
