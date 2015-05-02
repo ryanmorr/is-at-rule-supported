@@ -14,12 +14,24 @@ describe('isAtRuleSupported', function(){
 
     if(window.CSSRule){
         it('should return true when an at-rule is supported', function(){
-            expect(isAtRuleSupported('@style')).to.equal(true);
-            expect(isAtRuleSupported('@import')).to.equal(true);
+            var rules = [
+                'style',
+                'import'
+            ];
+            rules.forEach(function(rule){
+                expect(isAtRuleSupported('@' + rule)).to.equal(true);
+            });
         });
 
         it('should return false when an at-rule is not supported', function(){
-            expect(isAtRuleSupported('@foo')).to.equal(false);
+            var rules = [
+                'foo',
+                'bar',
+                'baz'
+            ];
+            rules.forEach(function(rule){
+                expect(isAtRuleSupported('@' + rule)).to.equal(false);
+            });
         });
     }
 
