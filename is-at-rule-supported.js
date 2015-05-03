@@ -14,7 +14,7 @@
     support, 
     length;
 
-    win.isAtRuleSupported = function(rule){
+    win.isAtRuleSupported = function isAtRuleSupported(rule){
         // If the `CSSRule` interface doesn't exist, return undefined
         if(!win.CSSRule){
             return undefined;
