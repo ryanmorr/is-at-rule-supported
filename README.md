@@ -1,6 +1,6 @@
 # isAtRuleSupported
 
-Feature test support for CSS at-rules in JavaScript by checking for the existance of the corresponding type constant of the `CSSRule` interface. Please refer to the [blog post](http://www.ryanmorr.com/feature-testing-css-at-rules/) to read more, or see a [working example](http://codepen.io/ryanmorr/full/XJMYOG/).
+Feature test support for CSS at-rules in JavaScript by checking for the existance of the corresponding type constant of the `CSSRule` interface. Please refer to the [blog post](http://www.ryanmorr.com/feature-testing-css-at-rules/) to read more, or see a [working example](http://ryanmorr.github.io/demos/is-at-rule-supported/).
 
 ## Usage
 
