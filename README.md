@@ -1,31 +1,40 @@
 # isAtRuleSupported
 
-Feature test support for CSS at-rules in JavaScript by checking for the existance of the corresponding type constant of the `CSSRule` interface. Please refer to the [blog post](http://www.ryanmorr.com/feature-testing-css-at-rules/) to read more, or see a [working example](http://ryanmorr.github.io/demos/is-at-rule-supported/).
+[![Version Badge][version-image]][project-url]
+[![Build Status][build-image]][build-url]
+[![License][license-image]][license-url]
+
+> Feature test support for CSS at-rules
+
+## Install
+
+Download the [development](http://github.com/ryanmorr/is-at-rule-supported/raw/master/dist/is-at-rule-supported.js) or [minified](http://github.com/ryanmorr/is-at-rule-supported/raw/master/dist/is-at-rule-supported.min.js) version, or install via NPM:
+
+``` sh
+npm install @ryanmorr/is-at-rule-supported
+```
 
 ## Usage
 
 To use the method, simply provide a string of the CSS at-rule:
 
 ```javascript
-// is the @keyframes rule supported
+import isAtRuleSupported from '@ryanmorr/is-at-rule-supported';
+
+// Check if the @keyframes rule supported
 isAtRuleSupported('@keyframes');
-// is the @font-face rule supported
-isAtRuleSupported('@font-face');
-// is the @supports rule supported
+
+// Check if the @supports rule supported
 isAtRuleSupported('@supports');
 ```
-The function will return true for supported at-rules, false for unsupported at-rules, and undefined for browsers that do not support the `CSSRule` interface.
-
-## Browser Support
-
-* Chrome *
-* Firefox *
-* Opera *
-* Safari *
-* Internet Explorer 9+
-* Android *
-* iOS *
 
 ## License
 
 This project is dedicated to the public domain as described by the [Unlicense](http://unlicense.org/).
+
+[project-url]: https://github.com/ryanmorr/is-at-rule-supported
+[version-image]: https://badge.fury.io/gh/ryanmorr%2Fis-at-rule-supported.svg
+[build-url]: https://travis-ci.org/ryanmorr/is-at-rule-supported
+[build-image]: https://travis-ci.org/ryanmorr/is-at-rule-supported.svg
+[license-image]: https://img.shields.io/badge/license-Unlicense-blue.svg
+[license-url]: UNLICENSE
